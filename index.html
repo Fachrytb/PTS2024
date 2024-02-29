@@ -12,16 +12,16 @@
 </head>
 
 <body>
-<h1>Daftar pembeli</h1>
+<h1>Daftar Pembeli</h1>
 
 <table class="table"id="daftar-pembeli">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Nama pembeli</th>
+      <th scope="col">Nama Pembeli</th>
       <th scope="col">Alamat</th>
       <th scope="col">No.Tlpn</th>
-      <th scope="col">aksi</th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -29,8 +29,6 @@
   </tbody>
 </table>
 <img src="loader.gif" style="width: 1.8em; display:  block" id="loader">
-<a href="pembeli.html">tambah data pembeli</a>
-
 <script type="module">
   import {ambilDaftarpembeli,hapusdata,formatAngka} from './main.js';
   
@@ -45,9 +43,11 @@
       '<td>'+ data.nama +'</td>'+
       '<td>'+ data.alamat +'</td>'+
       '<td>'+ data.nohp +'</td>'+
-         '<td>'+' <button class="btn btn-danger tombol-hapus" data="' +
+         '<td>'
+         +' <a href="pembeli.html"><button class="btn btn-primary tombol-tambah">tambah</button></a>'+ ' <button class="btn btn-danger tombol-hapus" data="' +
           data.id +
-          '">Hapus</button>' +'</td>'+
+          '">Hapus</button>' +
+          '</td>'+
         
       '</tr>'
       );
