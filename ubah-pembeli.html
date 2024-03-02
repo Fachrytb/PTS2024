@@ -38,17 +38,21 @@
 
     let tombolUbah = document.getElementById('tombol-ubah');
     let elemenNamaPembeli = document.getElementById('input-nama');
+     let elemenAlamat = document.getElementById('input-alamat');
+     let elemenNohp = document.getElementById('input-tlpn');
     const queryString = window.location.search;
     const parameterURL = new URLSearchParams(queryString);
     const docId = parameterURL.get('docId');
-    const siswa = await ambilSiswa(docId);
+    const pembeli = await ambilPembeli(docId);
     
-    elemenNamaSiswa.value = siswa.nama;
+    elemenNamaPembeli.value = pembeli.nama;
+      elemenAlamat.value = pembeli.alamat;
+      elemenNohp.value = pembeli.nohp;
 
     tombolUbah.addEventListener('click', async function(el) {
       el.preventDefault();
-      await ubahSiswa(docId, elemenNamaSiswa.value);
-      window.location.href = 'siswa.html';
+      await ubahPembeli(docId, elemenNamaPembeli.value, elemenAlamat.value, elemenNohp.value);
+      window.location.href = 'index.html';
     });
   </script>
 </body>
