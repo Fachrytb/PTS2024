@@ -69,8 +69,11 @@ export async function ubahPembeli(docId, nama, alamat, nohp) {
     nama: nama,
     alamat: alamat,
     nohp: nohp
-  
   });
+  console.log('berhasil mengubah data' + dok)
+  } catch (e) {
+    console.log('Gagal mengubah data' + e);
+  }
 }
 
 export async function ambilPembeli(docId) {
