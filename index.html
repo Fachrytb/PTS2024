@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
 
 <head>
@@ -21,7 +21,7 @@
       <th scope="col">Nama Pembeli</th>
       <th scope="col">Alamat</th>
       <th scope="col">No.Tlpn</th>
-      <th scope="col"></th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -44,8 +44,11 @@
       '<td>'+ data.nama +'</td>'+
       '<td>'+ data.alamat +'</td>'+
       '<td>'+ data.nohp +'</td>'+
-         '<td>'
-         + ' <button class="btn btn-danger tombol-hapus" data="' +
+         '<td>'   
+      + ' <button class="btn btn-warning tombol-ubah" data="' +
+          data.id +
+          '">Ubah</button>' +
+      + ' <button class="btn btn-danger tombol-hapus" data="' +
           data.id +
           '">Hapus</button>' +
           '</td>'+
