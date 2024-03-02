@@ -63,3 +63,19 @@ export async function tambahPembeli(nama, alamat, nohp) {
     console.log('Gagal menambah data' + e);
   }
 }
+
+export async function ubahPembeli(docId, nama, alamat, nohp) {
+  await updateDoc(doc(db, "Pembeli", docId), { 
+    nama: nama,
+    alamat: alamat,
+    nohp: nohp
+  
+  });
+}
+
+export async function ambilPembeli(docId) {
+  const docRef = await doc(db, "pembeli", docId);
+  const docSnap = await getDoc(docRef);
+  
+  return await docSnap.data();
+}
