@@ -51,7 +51,7 @@
 
     tombolUbah.addEventListener('click', async function(el) {
       el.preventDefault();
-      await ubahPembeli(docId, elemenNamaPembeli.value, elemenAlamat.value);
+      await ubahPembeli(docId, elemenNamaPembeli.value, elemenAlamat.value, elemenNohp.value);
       window.location.href = 'index.html';
     });
   </script>
