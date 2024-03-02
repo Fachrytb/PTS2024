@@ -64,11 +64,9 @@ export async function tambahPembeli(nama, alamat, nohp) {
   }
 }
 
-export async function ubahPembeli(docId, val, val, val) {
+export async function ubahPembeli(docId, val) {
   await updateDoc(doc(db, "pembeli", docId), { 
-    nama: val,
-    alamat: val,
-    nohp: val
+    nama: val
   
   });
 }
